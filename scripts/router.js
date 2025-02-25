@@ -1,3 +1,7 @@
+// Desc: This file is responsible for setting up the routes for the API.
+// It uses the dataProvider object to access the data.
+// And makes use of the routes defined in the routes folder
+
 const setArtistsRoutes = require('./routes/artistRoutes');
 const setCountRoutes = require('./routes/countRoutes');
 const setErasRoutes = require('./routes/eraRoutes');

@@ -1,5 +1,8 @@
+// This file contains all routes for counts
+
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//exported to master router file
 const setCountRoutes = (app, dataProvider) => {
     getGenresPaintingCount(app, dataProvider);
     getArtistPaintingCount(app, dataProvider);

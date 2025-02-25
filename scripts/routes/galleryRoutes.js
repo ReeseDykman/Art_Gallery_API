@@ -1,5 +1,8 @@
+//contains all routes for galleries
+
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//exported to master router file
 const setGalleryRoutes = (app, dataProvider) => {
     getAllGalleries(app, dataProvider);
     getGalleryById(app, dataProvider);

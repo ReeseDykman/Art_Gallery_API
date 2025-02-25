@@ -1,5 +1,7 @@
+//contains all routes for paintings
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//exported to master router file
 const setPaintingRoutes = (app, dataProvider) => {
     getAllPaintings(app, dataProvider);
     getPaintingsSorted(app, dataProvider);
@@ -27,8 +29,11 @@ const getPaintingsSorted = (app, dataProvider) => {
     app.get('/api/paintings/sort/:sort', async (req, res) => {
         let { sort } = req.params;
         sort = sort.toLowerCase();
+        //ensure proper sort params
         if (sort !== 'year' && sort !== 'title') return res.status(400).json({ error: 'Invalid sort parameter' });
+
         const { data, error } = await dataProvider.getPaintingsSorted(sort);
+        
         if (error) 
             handleErrors(error, res); 
         else

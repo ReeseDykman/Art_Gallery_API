@@ -5,6 +5,8 @@ const supabase = supa.createClient(
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhpcWtleXNraGFlY3BqeGZma293Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAzMzUxMzYsImV4cCI6MjA1NTkxMTEzNn0.mNLp9x5gqU9rq_k9wGG1Z00Kwggd3n7fbiCQbt-odCg'
 );
 
+//this object contains all the functions that interact with the database
+//these functions are used in the routes to get the data from the database
 const dataProvider = {
     getAllEras: async () => {
         return await supabase.from('eras').select('*');

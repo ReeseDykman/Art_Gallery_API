@@ -1,5 +1,8 @@
+//contains all routes for eras
+
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//exported to master router file
 const setEraRoutes = (app, dataProvider) => {
     getAllEras(app, dataProvider);
 };

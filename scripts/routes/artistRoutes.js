@@ -1,5 +1,8 @@
+//This file contains all routes relating to artists
+
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//this will be exported to the main router file
 const setArtistsRoutes = (app, dataProvider) => {
     getAllArtists(app, dataProvider);
     getArtistById(app, dataProvider);

@@ -1,5 +1,8 @@
+//this file contains the routes for the genre entity
+
 const {handleResponse, handleErrors} = require('../helpers.js');
 
+//exported to master router file
 const setGenreRoutes = (app, dataProvider) => {
     getAllGenres(app, dataProvider);
     getGenreById(app, dataProvider);

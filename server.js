@@ -4,8 +4,10 @@ const express = require('express');
 const app = express();
 const {setRoutes} = require('./scripts/router.js');
 
+//use setRoutes function to set up all routes
 setRoutes(app);
 
+//for testing purposes
 app.listen(8080, () => {
     console.log('Server is running on port 8080');
     console.log('http://localhost:8080/api/eras');
