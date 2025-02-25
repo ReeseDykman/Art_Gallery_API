@@ -23,8 +23,8 @@ app.listen(8080, () => {
     console.log('http://localhost:8080/api/paintings/search/port');
     console.log('http://localhost:8080/api/paintings/years/1800/1850');
     console.log('http://localhost:8080/api/paintings/galleries/5');
-    console.log('http://localhost:8080/api/paintings/artists/16');
-    console.log('http://localhost:8080/api/paintings/artists/country/FR');
+    console.log('http://localhost:8080/api/paintings/artist/16');
+    console.log('http://localhost:8080/api/paintings/artist/country/FR');
     console.log('http://localhost:8080/api/genres');
     console.log('http://localhost:8080/api/genres/76');
     console.log('http://localhost:8080/api/genres/painting/408');
