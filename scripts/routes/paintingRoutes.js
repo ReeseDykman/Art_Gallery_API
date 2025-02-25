@@ -85,7 +85,7 @@ const getPaintingsByGallery = (app, dataProvider) => {
 }
 
 const getPaintingsByArtist = (app, dataProvider) => {
-    app.get('/api/paintings/artists/:artistId', async (req, res) => {
+    app.get('/api/paintings/artist/:artistId', async (req, res) => {
         const { artistId } = req.params;
         const { data, error } = await dataProvider.getPaintingsByArtist(artistId);
         if (error) 
@@ -96,7 +96,7 @@ const getPaintingsByArtist = (app, dataProvider) => {
 }
 
 const getPaintingsByArtistNationality = (app, dataProvider) => {
-    app.get('/api/paintings/artists/country/:nationality', async (req, res) => {
+    app.get('/api/paintings/artist/country/:nationality', async (req, res) => {
         const {nationality} = req.params;
         const {data, error} = await dataProvider.getPaintingsByArtistNationality(nationality);
         if (error) 
